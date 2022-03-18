@@ -1,0 +1,123 @@
+QFile passable("/home/rostislav/qt/Heroes/maps/small_passable.txt");
+    QFile terrain("/home/rostislav/qt/Heroes/maps/small_terrain.txt");
+    QFile map("/home/rostislav/qt/Heroes/maps/small_map.txt");
+    if (!passable.open(QIODevice::ReadOnly | QIODevice::Text))
+        return;
+    if (!terrain.open(QIODevice::ReadOnly | QIODevice::Text))
+        return;
+    map.open(QIODevice::Append);
+    QTextStream out(&map);
+    char * p = new char;
+    char * t = new char;
+    char ** pass = new char* [36];
+    char ** terr = new char* [36];
+    for(int i = 0; i < 36; i++){
+        terr[i] = new char [36];
+        pass[i] = new char [36];
+        for(int j = 0; j < 37; j++){
+            passable.getChar(p);
+            terrain.getChar(t);
+            if(p == "\n")
+                continue;
+            terr[i][j] = *t;
+            pass[i][j] = *p;
+        }
+    }
+    qDebug() << terr[30][15] << terr[30][16] << terr[30][17];
+    qDebug() << terr[31][15] << terr[31][16] << terr[31][17];
+    qDebug() << terr[32][15] << terr[32][16] << terr[32][17];
+    delete p, t;
+
+    for(int i = 0; i < 36; i++){
+        for(int j = 0; j < 36; j++){
+            out << "#";
+            switch (terr[i][j]) {
+            case '2':
+                out << "0";
+                break;
+            case '5':
+                out << "1";
+                break;
+            }
+            if(i == 0 || j == 0 || i == 35 || j == 35){
+                out << rand() % 7 << rand() % 4; 
+            }
+            else{
+                int count = 0;
+                for(int q = -1; q < 2; q++){
+                    for(int w = -1; w < 2; w++){
+                        if(q == 0 && w == 0)
+                            continue;
+                        if(terr[i][j] == terr[i+q][j+w]){
+                            if(q == 0 || w == 0)
+                                count = count + 4;
+                            else
+                                count++;
+                        }
+                    }
+                }
+                if(count == 20)
+                    out << rand() % 7 << rand() % 4;
+                else if(count == 19){
+                    if(terr[i+1][j+1] != terr[i][j])
+                        out << "90";
+                    if(terr[i+1][j-1] != terr[i][j])
+                        out << "91";
+                    if(terr[i-1][j-1] != terr[i][j])
+                        out << "92";
+                    if(terr[i-1][j+1] != terr[i][j])
+                        out << "93";
+                }
+                else if(count == 9 || count == 10 || count == 11){
+                    if(terr[i][j-1] != terr[i][j] && terr[i-1][j-1] != terr[i][j] && terr[i-1][j] != terr[i][j])
+                        out << "80";
+                    if(terr[i][j+1] != terr[i][j] && terr[i-1][j+1] != terr[i][j] && terr[i-1][j] != terr[i][j])
+                        out << "81";
+                    if(terr[i][j+1] != terr[i][j] && terr[i+1][j+1] != terr[i][j] && terr[i+1][j] != terr[i][j])
+                        out << "82";
+                    if(terr[i][j-1] != terr[i][j] && terr[i+1][j-1] != terr[i][j] && terr[i+1][j] != terr[i][j])
+                        out << "83";
+                }
+                else{
+                    if(terr[i][j-1] != terr[i][j])
+                        out << "70";
+                    if(terr[i-1][j] != terr[i][j])
+                        out << "71";
+                    if(terr[i][j+1] != terr[i][j])
+                        out << "72";
+                    if(terr[i+1][j] != terr[i][j])
+                        out << "73";
+                }
+            }
+
+            switch (pass[i][j]) {
+            case '0':
+                out << "000";
+                break;
+            case '1':
+                out << "100";
+                break;
+            case '2':
+                out << "500";
+                break;
+            case '3':
+                out << "501";
+                break;
+            }
+
+            if(j == 35)
+                out << "\n";
+            else
+                out << " ";
+        }
+    }
+
+    for (int i = 0; i < 36; i++){
+        delete[] pass[i];
+        delete[] terr[i];
+    }
+    delete[] pass;
+    delete[] terr;
+    passable.close();
+    terrain.close();
+    map.close();

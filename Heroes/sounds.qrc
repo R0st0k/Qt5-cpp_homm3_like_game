@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/technical">
+        <file>sounds/technical/BUTTON.WAV</file>
+        <file>sounds/technical/BUILDTWN.WAV</file>
+        <file>sounds/technical/HORSE00.wav</file>
+        <file>sounds/technical/PICKUP01.wav</file>
+        <file>sounds/technical/MILITARY.wav</file>
+    </qresource>
+</RCC>

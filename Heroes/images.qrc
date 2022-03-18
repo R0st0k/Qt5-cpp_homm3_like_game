@@ -1,0 +1,95 @@
+<RCC>
+    <qresource prefix="/technical">
+        <file>images/technical/608_555.png</file>
+        <file>images/technical/Buttons.png</file>
+        <file>images/technical/HEROQVBK.png</file>
+        <file>images/technical/InfoDesk.png</file>
+        <file>images/technical/MiniMap.png</file>
+        <file>images/technical/Radar.png</file>
+        <file>images/technical/StatusBar.png</file>
+        <file>images/technical/DateBar.png</file>
+        <file>images/technical/ResBar.png</file>
+        <file>images/technical/iam001n.bmp</file>
+        <file>images/technical/CursrA00.png</file>
+        <file>images/technical/CursrA20.png</file>
+        <file>images/technical/CursrA24.png</file>
+        <file>images/technical/endArrows.png</file>
+        <file>images/technical/arrows.png</file>
+    </qresource>
+    <qresource prefix="/terrains">
+        <file>images/terrains/tgrb000.png</file>
+        <file>images/terrains/tgrb001.png</file>
+        <file>images/terrains/tgrb002.png</file>
+        <file>images/terrains/tgrb003.png</file>
+        <file>images/terrains/tgrb004.png</file>
+        <file>images/terrains/tgrb005.png</file>
+        <file>images/terrains/tgrb006.png</file>
+        <file>images/terrains/tgrb007.png</file>
+        <file>images/terrains/tgrb008.png</file>
+        <file>images/terrains/tgrb009.png</file>
+        <file>images/terrains/trob000.png</file>
+        <file>images/terrains/trob001.png</file>
+        <file>images/terrains/trob002.png</file>
+        <file>images/terrains/trob003.png</file>
+        <file>images/terrains/trob004.png</file>
+        <file>images/terrains/trob005.png</file>
+        <file>images/terrains/trob006.png</file>
+        <file>images/terrains/trob007.png</file>
+        <file>images/terrains/trob008.png</file>
+        <file>images/terrains/trob009.png</file>
+    </qresource>
+    <qresource prefix="/frameSpace">
+        <file>images/frameSpace/EDG01.png</file>
+        <file>images/frameSpace/EDG02.png</file>
+        <file>images/frameSpace/EDG03.png</file>
+        <file>images/frameSpace/EDG04.png</file>
+        <file>images/frameSpace/EDG05.png</file>
+        <file>images/frameSpace/EDG06.png</file>
+        <file>images/frameSpace/EDG07.png</file>
+        <file>images/frameSpace/EDG08.png</file>
+        <file>images/frameSpace/EDG09.png</file>
+        <file>images/frameSpace/EDG10.png</file>
+        <file>images/frameSpace/EDG11.png</file>
+        <file>images/frameSpace/EDG12.png</file>
+        <file>images/frameSpace/EDG13.png</file>
+        <file>images/frameSpace/EDG14.png</file>
+        <file>images/frameSpace/EDG15.png</file>
+        <file>images/frameSpace/EDG16.png</file>
+        <file>images/frameSpace/EDG17.png</file>
+        <file>images/frameSpace/EDG18.png</file>
+        <file>images/frameSpace/EDG19.png</file>
+        <file>images/frameSpace/EDG20.png</file>
+        <file>images/frameSpace/EDG21.png</file>
+        <file>images/frameSpace/EDG22.png</file>
+        <file>images/frameSpace/EDG23.png</file>
+        <file>images/frameSpace/EDG24.png</file>
+        <file>images/frameSpace/EDG25.png</file>
+        <file>images/frameSpace/EDG26.png</file>
+        <file>images/frameSpace/EDG27.png</file>
+        <file>images/frameSpace/EDG28.png</file>
+        <file>images/frameSpace/EDG29.png</file>
+        <file>images/frameSpace/EDG30.png</file>
+        <file>images/frameSpace/EDG31.png</file>
+        <file>images/frameSpace/EDG32.png</file>
+        <file>images/frameSpace/EDG33.png</file>
+        <file>images/frameSpace/EDG34.png</file>
+        <file>images/frameSpace/EDG35.png</file>
+        <file>images/frameSpace/EDG36.png</file>
+    </qresource>
+    <qresource prefix="/landscape">
+        <file>images/landscape/AVLrk400.png</file>
+    </qresource>
+    <qresource prefix="/objects">
+        <file>images/objects/AVXmn1b0.png</file>
+        <file>images/objects/AVXmn4bA.png</file>
+        <file>images/objects/castle/AVCcasx0.png</file>
+        <file>images/objects/castle/AVCftrx0.png</file>
+        <file>images/objects/castle/AVCstrx0.png</file>
+        <file>images/objects/bonfire.png</file>
+        <file>images/objects/ah00_03.png</file>
+        <file>images/objects/ah12_03.png</file>
+    </qresource>
+    <qresource prefix="/maps">
+        <file>maps/small_map.txt</file>
+    </qresource>
+</RCC>
